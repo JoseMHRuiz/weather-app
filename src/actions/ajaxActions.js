@@ -4,7 +4,7 @@ export const fetchWeather = () => async (dispatch) => {
   const ids = {
     Comillas: 6360671,
     Miami: 4164138,
-    Madrid: 1704126,
+    Madrid: 3117732,
   };
   const fetches = await Promise.all(
     Object.values(ids).map((e) =>

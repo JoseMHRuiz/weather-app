@@ -20,7 +20,6 @@ class Home extends Component<FormProps, FormState> {
 
     const randomInt = (min: number, max: number) =>
       Math.floor(Math.random() * (max - min)) + min; // generate random integer
-
     this.state = {
       random: randomInt(1, 5), // randomly select background, whose names ends with 1 | 2 | 3 | 4
       imageSource: '',
@@ -59,6 +58,7 @@ class Home extends Component<FormProps, FormState> {
     this.props.fetchWeather();
     this.setBg('default');
     window.addEventListener('resize', () => this.setBg('default'));
+    console.log(this.props.weather);
   }
 
   render() {
